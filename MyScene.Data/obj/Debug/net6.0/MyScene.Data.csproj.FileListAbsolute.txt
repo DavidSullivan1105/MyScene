@@ -1,0 +1,12 @@
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\bin\Debug\net6.0\MyScene.Data.deps.json
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\bin\Debug\net6.0\MyScene.Data.dll
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\bin\Debug\net6.0\MyScene.Data.pdb
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\obj\Debug\net6.0\MyScene.Data.csproj.AssemblyReference.cache
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\obj\Debug\net6.0\MyScene.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\obj\Debug\net6.0\MyScene.Data.AssemblyInfoInputs.cache
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\obj\Debug\net6.0\MyScene.Data.AssemblyInfo.cs
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\obj\Debug\net6.0\MyScene.Data.csproj.CoreCompileInputs.cache
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\obj\Debug\net6.0\MyScene.Data.dll
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\obj\Debug\net6.0\refint\MyScene.Data.dll
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\obj\Debug\net6.0\MyScene.Data.pdb
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Data\obj\Debug\net6.0\ref\MyScene.Data.dll
