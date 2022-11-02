@@ -16,4 +16,14 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyScene.Data\MyScene.Data.csproj" />
+    <ProjectReference Include="..\MyScene.Models\MyScene.Models.csproj" />
+    <ProjectReference Include="..\MyScene.Services\MyScene.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>
