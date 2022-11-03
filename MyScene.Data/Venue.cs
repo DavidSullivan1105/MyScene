@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyScene.Data
 {
-    public class Venues
+    public class Venue
     {
         public int VenueID { get; set; }
         public String VenueName { get; set; }

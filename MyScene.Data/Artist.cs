@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyScene.Data
 {
-    public class Artists
+    public class Artist
     {
         [Key]
         public int ArtistsId { get; set; }
@@ -18,7 +18,6 @@ namespace MyScene.Data
         public int Phone { get; set; }
         [Required]
         public string Email { get; set; }
-        [Required]
         [ForeignKey("BandId")]
         public int Bands { get; set; }
         public Guid UserId { get; set; }

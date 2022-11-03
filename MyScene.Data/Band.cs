@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyScene.Data
 {
-    public class Bands
+    public class Band
     {
         [Key]
         public int BandsId { get; set; }
