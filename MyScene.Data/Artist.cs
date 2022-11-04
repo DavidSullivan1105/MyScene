@@ -18,8 +18,9 @@ namespace MyScene.Data
         public int Phone { get; set; }
         [Required]
         public string Email { get; set; }
+        public string Instrument { get; set; }
         [ForeignKey("BandId")]
-        public int Bands { get; set; }
-        public Guid UserId { get; set; }
+        public List<string> Bands { get; set; }
+        public Guid OwnerId { get; set; }
     }
 }

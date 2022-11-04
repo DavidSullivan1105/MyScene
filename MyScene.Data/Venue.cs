@@ -14,7 +14,7 @@ namespace MyScene.Data
         public int VenuePhone { get; set; }
         public bool Is21AndOver { get; set; }
         public VenueGenre VenueGenre { get; set; }
-
+        public Guid OwnerId { get; set; }
 
     }
     public enum VenueGenre { rock, jazz, hip_hop, country, dance}
