@@ -3780,7 +3780,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.AspNet.Identity.EntityFramework": "2.2.3"
+          "Microsoft.AspNet.Identity.EntityFramework": "2.2.3",
+          "MyScene.Data": "1.0.0",
+          "MyScene.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyScene.Services.dll": {}

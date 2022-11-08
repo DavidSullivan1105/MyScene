@@ -12,10 +12,21 @@ namespace MyScene.WebMVC.Controllers
             var model = new ArtistListItem[0];
             return View(model);
         }
-
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
+        }
+       
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(ArtistCreate model)
+        {
+            if (!ModelState.IsValid)
+            {
+
+            }
+            return View(model);
         }
     }
 }
