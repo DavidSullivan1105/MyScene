@@ -13,11 +13,11 @@ namespace MyScene.Data
         [Key]
         public int ArtistsId { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string ArtistName { get; set; }
         [Required]
-        public int Phone { get; set; }
+        public int ArtistPhone { get; set; }
         [Required]
-        public string Email { get; set; }
+        public string ArtistEmail { get; set; }
         public string Instrument { get; set; }
         [ForeignKey("BandId")]
         public List<string> Bands { get; set; }
