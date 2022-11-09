@@ -9,6 +9,15 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        @ViewBag.SaveResult
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+    </div>
+}
 <table class="table">
     <thead>
         <tr>
@@ -16,13 +25,13 @@
                 @Html.DisplayNameFor(model => model.ArtistId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.ArtistName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Phone)
+                @Html.DisplayNameFor(model => model.ArtistPhone)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                @Html.DisplayNameFor(model => model.ArtistEmail)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Instrument)
@@ -40,13 +49,13 @@
                 @Html.DisplayFor(modelItem => item.ArtistId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.ArtistName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Phone)
+                @Html.DisplayFor(modelItem => item.ArtistPhone)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.ArtistEmail)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Instrument)
