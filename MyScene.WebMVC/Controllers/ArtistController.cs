@@ -44,6 +44,14 @@ namespace MyScene.WebMVC.Controllers
             return View(model);
         }
 
+        public IActionResult Details(int id)
+        {
+            var svc = CreateArtistService();
+            var model = svc.GetArtistById(id);
+
+            return View(model);
+        }
+
         private ArtistService CreateArtistService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
