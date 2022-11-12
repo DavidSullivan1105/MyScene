@@ -78,6 +78,19 @@ namespace MyScene.Services
                 };
         }
 
+        public bool UpdateArtist(ArtistEdit model)
+        {
+            var entity=
+                _ctx
+                .Artists.Single(e => e.ArtistId == model.ArtistId && e.OwnerId == _userId);
+
+            entity.ArtistId = model.ArtistId;
+            entity.ArtistName = model.ArtistName;
+            entity.ArtistEmail = model.ArtistEmail;
+
+            return _ctx.SaveChanges() == 1;
+        }
+
         public void SetUserId(Guid userId)
         {
             _userId = userId;

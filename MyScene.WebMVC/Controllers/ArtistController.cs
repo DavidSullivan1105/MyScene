@@ -57,6 +57,22 @@ namespace MyScene.WebMVC.Controllers
             
         }
 
+        public IActionResult Edit(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            var detail = _artistService.GetArtistById(id);
+            var model =
+                new ArtistEdit
+                {
+                    ArtistId = detail.ArtistId,
+                    ArtistName = detail.ArtistName,
+                    ArtistEmail = detail.ArtistEmail,
+                };
+            return View(model);
+
+        }
+
         private string GetUserId()
         {
             string userIdClaim = User.Claims.First(i => i.Type == ClaimTypes.NameIdentifier).Value;
