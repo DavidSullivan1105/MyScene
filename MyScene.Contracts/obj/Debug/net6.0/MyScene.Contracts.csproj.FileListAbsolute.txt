@@ -1,11 +1,14 @@
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\bin\Debug\net6.0\MyScene.Contracts.deps.json
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\bin\Debug\net6.0\MyScene.Contracts.dll
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\bin\Debug\net6.0\MyScene.Contracts.pdb
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\bin\Debug\net6.0\MyScene.Models.dll
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\bin\Debug\net6.0\MyScene.Models.pdb
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\obj\Debug\net6.0\MyScene.Contracts.csproj.AssemblyReference.cache
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\obj\Debug\net6.0\MyScene.Contracts.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\obj\Debug\net6.0\MyScene.Contracts.AssemblyInfoInputs.cache
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\obj\Debug\net6.0\MyScene.Contracts.AssemblyInfo.cs
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\obj\Debug\net6.0\MyScene.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\obj\Debug\net6.0\MyScene.Contracts.csproj.CopyComplete
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\obj\Debug\net6.0\MyScene.Contracts.dll
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\obj\Debug\net6.0\refint\MyScene.Contracts.dll
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Contracts\obj\Debug\net6.0\MyScene.Contracts.pdb

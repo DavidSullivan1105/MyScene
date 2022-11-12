@@ -10,11 +10,11 @@ namespace MyScene.Data
     public class MyScene
     {
         public Guid UserId { get; set; }
-        //[ForeignKey("ArtistsId")]
+        [ForeignKey("ArtistsId")]
         public List<Artist> MyArtists { get; set; }
-        //[ForeignKey("BandsId")]
-        public List<int> MyBands { get; set; }
-        //[ForeignKey("VenuesId")]
-        public List<int> MyVenues { get; set; }
+        [ForeignKey("BandsId")]
+        public List<Band> MyBands { get; set; }
+        [ForeignKey("VenuesId")]
+        public List<Venue> MyVenues { get; set; }
     }
 }
