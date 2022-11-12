@@ -11,11 +11,11 @@ namespace MyScene.Services
 {
     public class ArtistService : IArtistService
     {
-        private readonly Guid _userId;
-        public ApplicationDbContext _ctx;
-        public ArtistService(Guid userId)
+        private Guid _userId;
+        private readonly ApplicationDbContext _ctx;
+        public ArtistService(ApplicationDbContext context)
         {
-            _userId = userId;
+            _ctx = context;
         }
 
         public bool CreateArtist(ArtistCreate model)
@@ -76,6 +76,11 @@ namespace MyScene.Services
                     Instrument = entity.Instrument,
                     Bands = entity.Bands,
                 };
+        }
+
+        public void SetUseId(Guid userId)
+        {
+            _userId = userId;
         }
     }
 }
