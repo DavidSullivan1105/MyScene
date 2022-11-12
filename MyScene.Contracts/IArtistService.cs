@@ -12,6 +12,7 @@ namespace MyScene.Services
         public bool CreateArtist(ArtistCreate model);
         public IEnumerable<ArtistListItem> GetArtist();
         public ArtistDetail GetArtistById(int id);
+        public void SetUserId(Guid userId);
 
     }
 }

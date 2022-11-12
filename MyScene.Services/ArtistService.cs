@@ -78,7 +78,7 @@ namespace MyScene.Services
                 };
         }
 
-        public void SetUseId(Guid userId)
+        public void SetUserId(Guid userId)
         {
             _userId = userId;
         }
