@@ -3746,6 +3746,20 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "MyScene.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNet.Identity.EntityFramework": "2.2.3",
+          "MyScene.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MyScene.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyScene.Contracts.dll": {}
+        }
+      },
       "MyScene.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3781,6 +3795,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.3",
+          "MyScene.Contracts": "1.0.0",
           "MyScene.Data": "1.0.0",
           "MyScene.Models": "1.0.0"
         },
@@ -10575,6 +10590,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "MyScene.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../MyScene.Contracts/MyScene.Contracts.csproj",
+      "msbuildProject": "../MyScene.Contracts/MyScene.Contracts.csproj"
     },
     "MyScene.Data/1.0.0": {
       "type": "project",

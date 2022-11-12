@@ -932,6 +932,20 @@
           }
         }
       },
+      "MyScene.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNet.Identity.EntityFramework": "2.2.3",
+          "MyScene.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MyScene.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyScene.Contracts.dll": {}
+        }
+      },
       "MyScene.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2358,6 +2372,11 @@
         "version.txt"
       ]
     },
+    "MyScene.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../MyScene.Contracts/MyScene.Contracts.csproj",
+      "msbuildProject": "../MyScene.Contracts/MyScene.Contracts.csproj"
+    },
     "MyScene.Data/1.0.0": {
       "type": "project",
       "path": "../MyScene.Data/MyScene.Data.csproj",
@@ -2372,6 +2391,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.AspNet.Identity.EntityFramework >= 2.2.3",
+      "MyScene.Contracts >= 1.0.0",
       "MyScene.Data >= 1.0.0",
       "MyScene.Models >= 1.0.0"
     ]
@@ -2408,6 +2428,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\dcsul\\source\\repos\\MyScene.WebMVC\\MyScene.Contracts\\MyScene.Contracts.csproj": {
+              "projectPath": "C:\\Users\\dcsul\\source\\repos\\MyScene.WebMVC\\MyScene.Contracts\\MyScene.Contracts.csproj"
+            },
             "C:\\Users\\dcsul\\source\\repos\\MyScene.WebMVC\\MyScene.Data\\MyScene.Data.csproj": {
               "projectPath": "C:\\Users\\dcsul\\source\\repos\\MyScene.WebMVC\\MyScene.Data\\MyScene.Data.csproj"
             },

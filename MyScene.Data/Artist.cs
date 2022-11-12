@@ -11,7 +11,7 @@ namespace MyScene.Data
     public class Artist
     {
         [Key]
-        public int ArtistsId { get; set; }
+        public int ArtistId { get; set; }
         [Required]
         public string ArtistName { get; set; }
         [Required]

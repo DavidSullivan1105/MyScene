@@ -17,7 +17,7 @@ namespace MyScene.Data
         [Required]
         public Genre BandGenre { get; set; }
         [Required]
-        public List<T>? BandAlbums { get; set; }
+        public List<string>? BandAlbums { get; set; }
         public Guid OwnerId { get; set; }
 
 
