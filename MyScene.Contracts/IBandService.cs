@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyScene.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace MyScene.Contracts
 {
     public interface IBandService
     {
+        public bool CreateBand(BandCreate model);
+        public IEnumerable<BandListItem> GetBands();
         public void SetUserId(Guid userId);
     }
 }

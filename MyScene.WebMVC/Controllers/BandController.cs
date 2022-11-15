@@ -17,8 +17,10 @@ namespace MyScene.WebMVC.Controllers
 
         public IActionResult Index()
         {
-            var model = new BandListItem[0];
-            return View(model);
+            if (!SetUserIdInService()) return Unauthorized();
+            var bands = _bandService.GetBands();
+
+            return View(bands);
         }
         [HttpGet]
         public IActionResult Create()
@@ -34,9 +36,17 @@ namespace MyScene.WebMVC.Controllers
 
             if(ModelState.IsValid)
             {
+            return View(model);
+
+            }
+            if(_bandService.CreateBand(model))
+            {
+                TempData["SaveResult"] = "Band was created successfully.";
+            return RedirectToAction(nameof(Index));
 
             }
             return View(model);
+
 
         }
 
