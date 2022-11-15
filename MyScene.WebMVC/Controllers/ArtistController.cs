@@ -73,6 +73,31 @@ namespace MyScene.WebMVC.Controllers
 
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, ArtistEdit model)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            if(ModelState.IsValid) return View(model);
+
+            if(model.ArtistId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+            
+            if (_artistService.UpdateArtist(model))
+            {
+                TempData["SaveResult"] = "Artist was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Artist could not be updated.");
+            return View(model);
+
+        }
+
         private string GetUserId()
         {
             string userIdClaim = User.Claims.First(i => i.Type == ClaimTypes.NameIdentifier).Value;

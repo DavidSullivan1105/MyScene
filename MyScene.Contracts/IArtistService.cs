@@ -13,6 +13,7 @@ namespace MyScene.Services
         public IEnumerable<ArtistListItem> GetArtist();
         public ArtistDetail GetArtistById(int id);
         public void SetUserId(Guid userId);
+        public bool UpdateArtist(ArtistEdit model);
 
     }
 }
