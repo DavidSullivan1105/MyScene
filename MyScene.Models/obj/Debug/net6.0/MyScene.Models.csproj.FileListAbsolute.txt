@@ -10,3 +10,6 @@ C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Models\obj\Debug\net6.0\MySce
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Models\obj\Debug\net6.0\refint\MyScene.Models.dll
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Models\obj\Debug\net6.0\MyScene.Models.pdb
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Models\obj\Debug\net6.0\ref\MyScene.Models.dll
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Models\bin\Debug\net6.0\MyScene.Data.dll
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Models\bin\Debug\net6.0\MyScene.Data.pdb
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Models\obj\Debug\net6.0\MyScene.Models.csproj.CopyComplete

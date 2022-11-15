@@ -181,7 +181,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\dcsul\\source\\repos\\MyScene.WebMVC\\MyScene.Data\\MyScene.Data.csproj": {
+                "projectPath": "C:\\Users\\dcsul\\source\\repos\\MyScene.WebMVC\\MyScene.Data\\MyScene.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
