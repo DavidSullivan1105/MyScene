@@ -91,6 +91,18 @@ namespace MyScene.Services
             return _ctx.SaveChanges() == 1;
         }
 
+        public bool DeleteArtist(int artistId)
+        {
+            var entity =
+                _ctx
+                .Artists
+                .Single(e => e.ArtistId == artistId && e.OwnerId == _userId);
+
+            _ctx.Artists.Remove(entity);
+
+            return _ctx.SaveChanges() == 1;
+        }
+
         public void SetUserId(Guid userId)
         {
             _userId = userId;

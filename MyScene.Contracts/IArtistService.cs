@@ -14,6 +14,7 @@ namespace MyScene.Services
         public ArtistDetail GetArtistById(int id);
         public void SetUserId(Guid userId);
         public bool UpdateArtist(ArtistEdit model);
+        public bool DeleteArtist(int artistId);
 
     }
 }

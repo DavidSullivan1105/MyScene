@@ -98,6 +98,26 @@ namespace MyScene.WebMVC.Controllers
 
         }
 
+        [ActionName("Delete")]
+        public IActionResult Delete(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+            var model = _artistService.GetArtistById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteArtist(int id)
+        {
+             _artistService.GetArtistById(id);
+            TempData["SaveResult"] = "Artist was deleted.";
+
+            return RedirectToAction("Index");
+        }
+
         private string GetUserId()
         {
             string userIdClaim = User.Claims.First(i => i.Type == ClaimTypes.NameIdentifier).Value;
