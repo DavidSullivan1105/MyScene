@@ -58,6 +58,24 @@ namespace MyScene.WebMVC.Controllers
             return View(model);
         }
 
+        public IActionResult Edit(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            var detail = _bandService.GetBandById(id);
+            var model =
+                new BandEdit
+                {
+                    BandId = detail.BandId,
+                    BandName = detail.BandName,
+                    BandGenre = detail.Genre
+
+                };
+            return View(model);
+        }
+
+
+
 
 
         private string GetUserId()

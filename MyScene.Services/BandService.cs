@@ -65,6 +65,20 @@ namespace MyScene.Services
                 };
         }
 
+        pubilc bool UpdateBand(BandEdit model)
+        {
+            var entity =
+                _ctx
+                .Bands
+                .Single(e => e.BandId == model.BandId && e.OwnerId == _userId);
+
+            entity.BandId = model.BandId;
+            entity.BandName = model.BandName;
+            entity.BandGenre = model.BandGenre;
+
+            return _ctx.SaveChanges() == 1;
+        }
+
         public void SetUserId(Guid userId)
         {
             _userId = userId;
