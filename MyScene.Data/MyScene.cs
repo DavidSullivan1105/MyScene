@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,12 +10,13 @@ namespace MyScene.Data
 {
     public class MyScene
     {
+        [Key]
         public Guid UserId { get; set; }
-        [ForeignKey("ArtistsId")]
-        public List<Artist> MyArtists { get; set; }
-        [ForeignKey("BandsId")]
-        public List<Band> MyBands { get; set; }
-        [ForeignKey("VenuesId")]
-        public List<Venue> MyVenues { get; set; }
+        
+        public List<MySceneArtist> Artists { get; set; }
+       
+        public List<MySceneBand> Bands { get; set; }
+        
+        public List<MyScene> Venues { get; set; }
     }
 }

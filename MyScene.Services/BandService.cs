@@ -42,7 +42,7 @@ namespace MyScene.Services
                     e =>
                     new BandListItem
                     {
-                        BandId = e.BandsId,
+                        BandId = e.BandId,
                         BandName = e.BandName,
                         Genre = e.BandGenre,
 

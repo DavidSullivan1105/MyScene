@@ -1,3 +1,8 @@
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.csproj.AssemblyReference.cache
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.AssemblyInfoInputs.cache
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.AssemblyInfo.cs
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.csproj.CoreCompileInputs.cache
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\bin\Debug\net6.0\MyScene.Services.deps.json
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\bin\Debug\net6.0\MyScene.Services.dll
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\bin\Debug\net6.0\MyScene.Services.pdb
@@ -7,11 +12,6 @@ C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\bin\Debug\net6.0\MyS
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\bin\Debug\net6.0\MyScene.Contracts.pdb
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\bin\Debug\net6.0\MyScene.Data.pdb
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\bin\Debug\net6.0\MyScene.Models.pdb
-C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.csproj.AssemblyReference.cache
-C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.AssemblyInfoInputs.cache
-C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.AssemblyInfo.cs
-C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.csproj.CoreCompileInputs.cache
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.csproj.CopyComplete
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\MyScene.Services.dll
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.Services\obj\Debug\net6.0\refint\MyScene.Services.dll

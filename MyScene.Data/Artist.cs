@@ -20,7 +20,7 @@ namespace MyScene.Data
         public string ArtistEmail { get; set; }
         public string Instrument { get; set; }
         [ForeignKey("BandId")]
-        public List<string> Bands { get; set; }
+        public List<ArtistBand> Bands { get; set; }
         public Guid OwnerId { get; set; }
     }
 }
