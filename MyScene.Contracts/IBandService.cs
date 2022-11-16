@@ -13,6 +13,7 @@ namespace MyScene.Contracts
         public IEnumerable<BandListItem> GetBands();
         public void SetUserId(Guid userId);
         public BandDetail GetBandById(int id);
-        pubilc bool UpdateBand(BandEdit model);
+        public bool UpdateBand(BandEdit model);
+        public bool DeleteBand(int bandId);
     }
 }

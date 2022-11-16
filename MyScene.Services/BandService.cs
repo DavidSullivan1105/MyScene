@@ -65,7 +65,7 @@ namespace MyScene.Services
                 };
         }
 
-        pubilc bool UpdateBand(BandEdit model)
+        public bool UpdateBand(BandEdit model)
         {
             var entity =
                 _ctx
@@ -77,6 +77,19 @@ namespace MyScene.Services
             entity.BandGenre = model.BandGenre;
 
             return _ctx.SaveChanges() == 1;
+        }
+
+        public bool DeleteBand(int bandId)
+        {
+            var entity =
+                _ctx
+                .Bands
+                .Single(e => e.BandId == bandId && e.OwnerId == _userId);
+
+            _ctx.Bands.Remove(entity);
+
+            return _ctx.SaveChanges() == 1;
+
         }
 
         public void SetUserId(Guid userId)

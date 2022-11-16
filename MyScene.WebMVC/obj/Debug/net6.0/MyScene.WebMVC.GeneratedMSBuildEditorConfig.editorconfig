@@ -43,8 +43,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuZFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Band/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuZFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Band/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuZFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Band/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuZFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Band/Index.cshtml]

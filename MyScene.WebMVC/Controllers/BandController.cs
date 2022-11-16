@@ -74,6 +74,54 @@ namespace MyScene.WebMVC.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, BandEdit model)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            if(!ModelState.IsValid) return  View(model);
+            if(model.BandId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            if(_bandService.UpdateBand(model))
+            {
+                TempData["SaveResult"] = "Band was updated";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Band could not be updated");
+            return View(model);
+
+        }
+
+        [ActionName("Delete")]
+        public IActionResult Delete(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            var model = _bandService.GetBandById(id);
+            return View(model);
+
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            _bandService.DeleteBand(id);
+
+            TempData["SaveResult"] = "Band was deleted";
+            return RedirectToAction("Index");
+        }
+        public
+
 
 
 
