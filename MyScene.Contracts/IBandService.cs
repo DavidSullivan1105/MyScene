@@ -12,5 +12,6 @@ namespace MyScene.Contracts
         public bool CreateBand(BandCreate model);
         public IEnumerable<BandListItem> GetBands();
         public void SetUserId(Guid userId);
+        public BandDetail GetBandById(int id);
     }
 }
