@@ -50,6 +50,21 @@ namespace MyScene.Services
             return query.ToArray();
         }
 
+        public BandDetail GetBandById(int id)
+        {
+            var entity =
+                _ctx
+                .Bands
+                .Single(e => e.BandId == id && e.OwnerId == _userId);
+            return
+                new BandDetail
+                {
+                    BandId = entity.BandId,
+                    BandName = entity.BandName,
+                    Genre = entity.BandGenre
+                };
+        }
+
         public void SetUserId(Guid userId)
         {
             _userId = userId;

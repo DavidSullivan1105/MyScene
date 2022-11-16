@@ -49,6 +49,16 @@ namespace MyScene.WebMVC.Controllers
 
 
         }
+        public IActionResult Details(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            var model = _bandService.GetBandById(id);
+
+            return View(model);
+        }
+
+
 
         private string GetUserId()
         {
