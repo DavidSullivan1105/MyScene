@@ -73,6 +73,21 @@ namespace MyScene.Services
 
         }
 
+        public bool UpdateVenue(VenueEdit model)
+        {
+            var entity =
+                _ctx
+                .Venues
+                .Single(e => e.VenueID == model.VenueId && e.OwnerId == _userId);
+
+            entity.VenueName = model.VenueName;
+            entity.VenueAddress = model.VenueAddress;
+            entity.VenuePhone = model.VenuePhone;
+            entity.Is21AndOver = model.Is21AndOver;
+
+            return _ctx.SaveChanges() == 1;
+        }
+
         public void SetUserId(Guid userId)
         {
             _userId = userId;

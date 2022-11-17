@@ -12,5 +12,6 @@ namespace MyScene.Contracts
         public void SetUserId(Guid userId);
         public bool CreateVenue(VenueCreate model);
         public IEnumerable<VenueListItem> GetVenues();
+        public VenueDetail GetVenueById(int id);
     }
 }

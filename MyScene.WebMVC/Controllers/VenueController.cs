@@ -45,6 +45,24 @@ namespace MyScene.WebMVC.Controllers
 
         }
 
+        public IActionResult Edit(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            var detail = _venueService.GetVenueById(id);
+            var model =
+                new VenueEdit
+                {
+                    VenueId = detail.VenueId,
+                    VenueName = detail.VenueName,
+                    VenueAddress = detail.VenueAddress,
+                    VenuePhone = detail.VenuePhone,
+                    Is21AndOver = detail.Is21AndOver,
+
+                };
+            return View(model);
+        }
+
         private string GetUserId()
         {
             string userIdClaim = User.Claims.First(i => i.Type == ClaimTypes.NameIdentifier).Value;
