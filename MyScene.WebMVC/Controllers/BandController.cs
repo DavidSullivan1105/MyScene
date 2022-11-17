@@ -111,7 +111,7 @@ namespace MyScene.WebMVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public IActionResult Delete(int id)
+        public IActionResult DeleteBand(int id)
         {
             if (!SetUserIdInService()) return Unauthorized();
 
@@ -120,7 +120,7 @@ namespace MyScene.WebMVC.Controllers
             TempData["SaveResult"] = "Band was deleted";
             return RedirectToAction("Index");
         }
-        public
+        
 
 
 

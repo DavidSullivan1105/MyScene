@@ -112,7 +112,9 @@ namespace MyScene.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteArtist(int id)
         {
-             _artistService.GetArtistById(id);
+            if (!SetUserIdInService()) return Unauthorized();
+
+            _artistService.GetArtistById(id);
             TempData["SaveResult"] = "Artist was deleted.";
 
             return RedirectToAction("Index");
