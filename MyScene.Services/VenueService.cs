@@ -55,6 +55,24 @@ namespace MyScene.Services
             return query.ToArray();
         }
 
+        public VenueDetail GetVenueById(int id)
+        {
+            var entity =
+                _ctx
+                .Venues
+                .Single(e => e.VenueID == id && e.OwnerId == _userId);
+            return
+                new VenueDetail
+                {
+                    VenueId = entity.VenueID,
+                    VenueName = entity.VenueName,
+                    VenueAddress = entity.VenueAddress,
+                    VenuePhone = entity.VenuePhone,
+                    Is21AndOver = entity.Is21AndOver,
+                };
+
+        }
+
         public void SetUserId(Guid userId)
         {
             _userId = userId;

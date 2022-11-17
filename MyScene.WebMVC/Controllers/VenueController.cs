@@ -35,6 +35,16 @@ namespace MyScene.WebMVC.Controllers
             return View(model);
         }
 
+        public IActionResult Details(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            var model = _venueService.GetVenueById(id);
+
+            return View(model);
+
+        }
+
         private string GetUserId()
         {
             string userIdClaim = User.Claims.First(i => i.Type == ClaimTypes.NameIdentifier).Value;
