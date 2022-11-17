@@ -28,7 +28,7 @@ namespace MyScene.WebMVC.Controllers
         {
             return View();
         }
-       
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(ArtistCreate model)

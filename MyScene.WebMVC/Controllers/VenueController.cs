@@ -23,11 +23,15 @@ namespace MyScene.WebMVC.Controllers
         {
             if (!SetUserIdInService()) return Unauthorized();
 
-            if(ModelState.IsValid)
+            if(!ModelState.IsValid)
             {
-
+                return View(model);
             }
-
+            else
+            {
+                if(_venueService.CreateVenue(model))
+                    return RedirectToAction(nameof(Index));
+            }
             return View(model);
         }
 
