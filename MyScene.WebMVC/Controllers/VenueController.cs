@@ -62,6 +62,50 @@ namespace MyScene.WebMVC.Controllers
                 };
             return View(model);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult Edit(int id, VenueEdit model)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            if(!ModelState.IsValid) return View(model);
+
+            if(model.VenueId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            if(_venueService.UpdateVenue(model))
+            {
+                TempData["SaveResult"] = "Venue was updated";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Venue could not be updated");
+            return View(model);
+        }
+        [ActionName("Delete")]
+        public IActionResult Delete(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            var model = _venueService.GetVenueById(id);
+
+            return View(model);
+
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteVenue(int id)
+        {
+            _venueService.DeleteVenue(id);
+            TempData["SaveResult"] = "Venue was deleted";
+            return RedirectToAction("Index");
+        }
 
         private string GetUserId()
         {

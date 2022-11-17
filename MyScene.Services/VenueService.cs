@@ -88,6 +88,18 @@ namespace MyScene.Services
             return _ctx.SaveChanges() == 1;
         }
 
+        public bool DeleteVenue(int venueId)
+        {
+            var entity =
+                _ctx
+                .Venues
+                .Single(e => e.VenueID == venueId && e.OwnerId == _userId);
+
+            _ctx.Venues.Remove(entity);
+
+            return _ctx.SaveChanges() == 1;
+        }
+
         public void SetUserId(Guid userId)
         {
             _userId = userId;

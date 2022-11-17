@@ -13,5 +13,6 @@ namespace MyScene.Contracts
         public bool CreateVenue(VenueCreate model);
         public IEnumerable<VenueListItem> GetVenues();
         public VenueDetail GetVenueById(int id);
+        public bool UpdateVenue(VenueEdit model);
     }
 }
