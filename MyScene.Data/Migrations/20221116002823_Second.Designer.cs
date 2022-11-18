@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MyScene.Data;
+using MyScenes.Data;
 
 #nullable disable
 
-namespace MyScene.Data.Migrations
+namespace MyScenes.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20221116002823_Second")]

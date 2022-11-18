@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace MyScene.Data.Migrations
+namespace MyScenes.Data.Migrations
 {
     public partial class Second : Migration
     {

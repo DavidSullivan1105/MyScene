@@ -1,13 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MyScene.Contracts;
-using MyScene.Models;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using MyScenes.Contracts;
+using MyScenes.Models;
 using System.Security.Claims;
 
-namespace MyScene.WebMVC.Controllers
+namespace MyScenes.WebMVC.Controllers
 {
+    [Authorize]
     public class VenueController : Controller
     {
         private readonly IVenueService _venueService;
+
+        public VenueController(IVenueService venueService)
+        {
+            _venueService = venueService;
+        }
+
         public IActionResult Index()
         {
             return View();

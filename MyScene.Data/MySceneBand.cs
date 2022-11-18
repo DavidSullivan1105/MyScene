@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyScene.Data
+namespace MyScenes.Data
 {
     public class MySceneBand
     {

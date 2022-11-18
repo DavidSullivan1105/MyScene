@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MyScene.Models;
-using MyScene.Services;
+using MyScenes.Models;
+using MyScenes.Services;
 using System.Security.Claims;
 
-namespace MyScene.WebMVC.Controllers
+namespace MyScenes.WebMVC.Controllers
 {
     [Authorize]
     public class ArtistController : Controller

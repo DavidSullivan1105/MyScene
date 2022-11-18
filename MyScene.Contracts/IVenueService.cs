@@ -1,11 +1,11 @@
-﻿using MyScene.Models;
+﻿using MyScenes.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyScene.Contracts
+namespace MyScenes.Contracts
 {
     public interface IVenueService
     {

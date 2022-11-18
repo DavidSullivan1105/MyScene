@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using MyScene.Contracts;
-using MyScene.Data;
-using MyScene.Services;
+using MyScenes.Contracts;
+using MyScenes.Data;
+using MyScenes.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +17,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IArtistService, ArtistService>();
 builder.Services.AddScoped<IBandService, BandService>();
 builder.Services.AddScoped<IVenueService, VenueService>();
+builder.Services.AddScoped<IMySceneService, MySceneService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

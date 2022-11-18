@@ -1,13 +1,13 @@
-﻿using MyScene.Contracts;
-using MyScene.Data;
-using MyScene.Models;
+﻿using MyScenes.Contracts;
+using MyScenes.Data;
+using MyScenes.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyScene.Services
+namespace MyScenes.Services
 {
     public class BandService : IBandService
     {

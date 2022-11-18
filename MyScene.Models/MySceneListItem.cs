@@ -1,22 +1,22 @@
-﻿using System;
+﻿using MyScenes.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyScenes.Data
+namespace MyScenes.Models
 {
-    public class MyScene
+    public class MySceneListItem
     {
         [Key]
         public Guid UserId { get; set; }
-        
+        [Required]
         public List<MySceneArtist> Artists { get; set; }
-       
+        [Required]
         public List<MySceneBand> Bands { get; set; }
-        
+        [Required]
         public List<MySceneVenue> Venues { get; set; }
     }
 }

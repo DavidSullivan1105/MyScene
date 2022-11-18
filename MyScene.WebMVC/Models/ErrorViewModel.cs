@@ -1,4 +1,4 @@
-namespace MyScene.WebMVC.Models
+namespace MyScenes.WebMVC.Models
 {
     public class ErrorViewModel
     {
