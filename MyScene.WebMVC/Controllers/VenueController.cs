@@ -38,7 +38,13 @@ namespace MyScenes.WebMVC.Controllers
             else
             {
                 if(_venueService.CreateVenue(model))
-                    return RedirectToAction(nameof(Index));
+                {
+                    ViewBag.SaveResult = "Venue created successfully";
+                    return RedirectToAction("Index");
+                }
+
+                ModelState.AddModelError("", "Venue could not be created");
+                    
             }
             return View(model);
         }

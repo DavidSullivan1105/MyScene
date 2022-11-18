@@ -1,4 +1,5 @@
-﻿using MyScenes.Contracts;
+﻿using MyScene.Models;
+using MyScenes.Contracts;
 using MyScenes.Data;
 using MyScenes.Models;
 using System;
@@ -33,6 +34,40 @@ namespace MyScenes.Services
             return _ctx.SaveChanges() == 1;
         }
 
+        public IEnumerable<MySceneListItem> GetMyScenes()
+        {
+            var query =
+                _ctx
+                .MyScenes
+                .Where(e => e.UserId == _userId)
+                .Select(
+                    e =>
+                    new MySceneListItem
+                    {
+                        UserId = e.UserId,
+                        Artists = e.Artists,
+                        Bands = e.Bands,
+                        Venues = e.Venues,
+                    });
+            return query.ToArray();
+        }
+
+        public MySceneDetail GetMySceneById(Guid userId)
+        {
+            var entity =
+                _ctx
+                .MyScenes
+                .Single(e => e.UserId == userId);
+
+            return
+                new MySceneDetail
+                {
+                    UserId = userId,
+                    Artists = entity.Artists,
+                    Bands = entity.Bands,
+                    Venues = entity.Venues,
+                };
+        }
         public void SetUserId(Guid userId)
         {
             _userId = userId;

@@ -41,9 +41,22 @@ namespace MyScenes.WebMVC.Controllers
             else
             {
                 if (_mySceneService.CreateMyScene(model))
+                {
+                    TempData["SaveResult"] = "MyScene was created successfully";
                     return RedirectToAction(nameof(Index));
+                }
+                ModelState.AddModelError("", "MyScene could not be created");
             }
             return View(model);
+        }
+
+        public IActionResult Details(Guid userId)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+            var model = _mySceneService.GetMySceneById(userId);
+
+            return View(model);
+
         }
         private string GetUserId()
         {
