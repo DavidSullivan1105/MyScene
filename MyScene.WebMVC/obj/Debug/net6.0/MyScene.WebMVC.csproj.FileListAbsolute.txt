@@ -3,6 +3,7 @@ C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.WebMVC\obj\Debug\net6.0\MySce
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.WebMVC\obj\Debug\net6.0\MyScene.WebMVC.AssemblyInfoInputs.cache
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.WebMVC\obj\Debug\net6.0\MyScene.WebMVC.AssemblyInfo.cs
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.WebMVC\obj\Debug\net6.0\MyScene.WebMVC.csproj.CoreCompileInputs.cache
+C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.WebMVC\obj\Debug\net6.0\MyScene.WebMVC.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.WebMVC\obj\Debug\net6.0\MyScene.WebMVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.WebMVC\obj\Debug\net6.0\MyScene.WebMVC.RazorAssemblyInfo.cache
 C:\Users\dcsul\source\repos\MyScene.WebMVC\MyScene.WebMVC\obj\Debug\net6.0\MyScene.WebMVC.RazorAssemblyInfo.cs

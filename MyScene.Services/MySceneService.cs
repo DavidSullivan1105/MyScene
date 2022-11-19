@@ -1,12 +1,12 @@
 ﻿using MyScene.Models;
 using MyScene.Contracts;
 using MyScene.Data;
-using MyScene.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyScene.Data;
 
 namespace MyScene.Services
 {
@@ -20,19 +20,19 @@ namespace MyScene.Services
             _ctx = context;
         }
 
-        public bool CreateMyScene(MySceneCreate model)
-        {
-            var entity =
-                new MyScene.Data.MyScene()
-                {
-                    //UserId = _userId,
-                    Artists = model.Artists,
-                    Bands = model.Bands,
-                    Venues = model.Venues,
-                };
-            _ctx.MyScene.Add(entity);
-            return _ctx.SaveChanges() == 1;
-        }
+        //public bool CreateMyScene(MySceneCreate model)
+        //{
+        //    var entity =
+        //        new MyScene()
+        //        {
+        //            UserId = _userId,
+        //            Artists = model.Artists,
+        //            Bands = model.Bands,
+        //            Venues = model.Venues,
+        //        };
+        //    _ctx.MyScene.Add(entity);
+        //    return _ctx.SaveChanges() == 1;
+        //}
 
         public IEnumerable<MySceneListItem> GetMyScenes()
         {
@@ -67,6 +67,20 @@ namespace MyScene.Services
                     Bands = entity.Bands,
                     Venues = entity.Venues,
                 };
+        }
+
+        public bool UpdateMyScene(MySceneEdit model)
+        {
+            var entity =
+                _ctx
+                .MyScenes
+                .Single(e => e.UserId == model.UserId);
+
+            entity.Artists = model.Artists;
+            entity.Bands = model.Bands;
+            entity.Venues = model.Venues;
+
+            return _ctx.SaveChanges() == 1;
         }
 
 

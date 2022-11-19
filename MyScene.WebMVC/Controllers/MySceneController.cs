@@ -58,12 +58,29 @@ namespace MyScene.WebMVC.Controllers
             return View(model);
 
         }
+
+        public IActionResult Edit(Guid id)
+        {
+            var detail = _mySceneService.GetMySceneById(id);
+            var model =
+                new MySceneEdit
+                {
+                    UserId = detail.UserId,
+                    Artists = detail.Artists,
+                    Bands = detail.Bands,
+                    Venues = detail.Venues,
+                };
+            return View(model);
+
+        }
         private string GetUserId()
         {
             string userIdClaim = User.Claims.First(i => i.Type == ClaimTypes.NameIdentifier).Value;
             if (userIdClaim == null) return null;
             return userIdClaim;
         }
+
+
 
         private bool SetUserIdInService()
         {

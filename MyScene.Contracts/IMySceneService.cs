@@ -11,8 +11,9 @@ namespace MyScene.Contracts
     public interface IMySceneService
     {
         public void SetUserId(Guid userId);
-        public bool CreateMyScene(MySceneCreate model);
+        //public bool CreateMyScene(MySceneCreate model);
         public IEnumerable<MySceneListItem> GetMyScenes();
         public MySceneDetail GetMySceneById(Guid userId);
+        public bool UpdateMyScene(MySceneEdit model);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MyScene.WebMVC.Models;
+using MyScene.Models;
+
 using System.Diagnostics;
 
 namespace MyScene.WebMVC.Controllers
