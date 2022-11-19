@@ -61,6 +61,7 @@ namespace MyScene.WebMVC.Controllers
 
         public IActionResult Edit(Guid id)
         {
+            if (!SetUserIdInService()) return Unauthorized();
             var detail = _mySceneService.GetMySceneById(id);
             var model =
                 new MySceneEdit
@@ -72,6 +73,48 @@ namespace MyScene.WebMVC.Controllers
                 };
             return View(model);
 
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Guid id, MySceneEdit model)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            if(!ModelState.IsValid)
+            return View(model);
+            if(model.UserId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+            
+            if(_mySceneService.UpdateMyScene(model))
+            {
+                TempData["SaveResult"] = "Your Scene was updated";
+                return RedirectToAction(nameof(Index));
+            }
+            ModelState.AddModelError("", "Your Scene could not be updated");
+            return View(model);
+        }
+
+        [ActionName("Delete")]
+        public IActionResult Delete (Guid id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+            var model = _mySceneService.GetMySceneById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteMyScene(Guid id)
+        {
+            _mySceneService.DeleteMyScene(id);
+            TempData["SaveResult"] = "Your Scene was deleted";
+            return RedirectToAction(nameof(Index));
         }
         private string GetUserId()
         {

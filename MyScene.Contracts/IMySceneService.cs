@@ -15,5 +15,6 @@ namespace MyScene.Contracts
         public IEnumerable<MySceneListItem> GetMyScenes();
         public MySceneDetail GetMySceneById(Guid userId);
         public bool UpdateMyScene(MySceneEdit model);
+        public bool DeleteMyScene(Guid userId);
     }
 }

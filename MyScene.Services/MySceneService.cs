@@ -83,6 +83,17 @@ namespace MyScene.Services
             return _ctx.SaveChanges() == 1;
         }
 
+        public bool DeleteMyScene(Guid userId)
+        {
+            var entity =
+                _ctx
+                .MyScenes
+                .Single(e => e.UserId == _userId);
+
+            _ctx.MyScenes.Remove(entity);
+            return _ctx.SaveChanges() == 1;
+        }
+
 
         public void SetUserId(Guid userId)
         {
