@@ -20,19 +20,19 @@ namespace MyScene.Services
             _ctx = context;
         }
 
-        //public bool CreateMyScene(MySceneCreate model)
-        //{
-        //    var entity =
-        //        new MyScene()
-        //        {
-        //            UserId = _userId,
-        //            Artists = model.Artists,
-        //            Bands = model.Bands,
-        //            Venues = model.Venues,
-        //        };
-        //    _ctx.MyScene.Add(entity);
-        //    return _ctx.SaveChanges() == 1;
-        //}
+        public bool CreateMyScene(MySceneCreate model)
+        {
+            var entity =
+                new MyScene.Data.MyScene()
+                {
+                    UserId = _userId,
+                    Artists = model.Artists,
+                    Bands = model.Bands,
+                    Venues = model.Venues,
+                };
+            _ctx.MyScenes.Add(entity);
+            return _ctx.SaveChanges() == 1;
+        }
 
         public IEnumerable<MySceneListItem> GetMyScenes()
         {
