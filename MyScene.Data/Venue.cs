@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyScenes.Data
+namespace MyScene.Data
 {
     public class Venue
     {

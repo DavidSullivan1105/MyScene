@@ -1,14 +1,14 @@
 ﻿using MyScene.Models;
-using MyScenes.Contracts;
-using MyScenes.Data;
-using MyScenes.Models;
+using MyScene.Contracts;
+using MyScene.Data;
+using MyScene.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyScenes.Services
+namespace MyScene.Services
 {
     public class MySceneService :IMySceneService
     {
@@ -23,14 +23,14 @@ namespace MyScenes.Services
         public bool CreateMyScene(MySceneCreate model)
         {
             var entity =
-                new MyScene()
+                new MyScene.Data.MyScene()
                 {
-                    UserId = _userId,
+                    //UserId = _userId,
                     Artists = model.Artists,
                     Bands = model.Bands,
                     Venues = model.Venues,
                 };
-            _ctx.MyScenes.Add(entity);
+            _ctx.MyScene.Add(entity);
             return _ctx.SaveChanges() == 1;
         }
 
@@ -68,6 +68,8 @@ namespace MyScenes.Services
                     Venues = entity.Venues,
                 };
         }
+
+
         public void SetUserId(Guid userId)
         {
             _userId = userId;

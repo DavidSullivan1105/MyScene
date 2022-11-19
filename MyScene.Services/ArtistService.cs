@@ -1,5 +1,5 @@
-﻿using MyScenes.Data;
-using MyScenes.Models;
+﻿using MyScene.Data;
+using MyScene.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace MyScenes.Services
+namespace MyScene.Services
 {
     public class ArtistService : IArtistService
     {

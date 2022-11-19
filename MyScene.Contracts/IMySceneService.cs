@@ -1,12 +1,12 @@
 ﻿using MyScene.Models;
-using MyScenes.Models;
+using MyScene.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyScenes.Contracts
+namespace MyScene.Contracts
 {
     public interface IMySceneService
     {

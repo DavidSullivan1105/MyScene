@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyScenes.Models
+namespace MyScene.Models
 {
     public class ArtistCreate
     {

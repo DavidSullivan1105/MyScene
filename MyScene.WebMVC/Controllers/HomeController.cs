@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MyScenes.WebMVC.Models;
+using MyScene.WebMVC.Models;
 using System.Diagnostics;
 
-namespace MyScenes.WebMVC.Controllers
+namespace MyScene.WebMVC.Controllers
 {
     public class HomeController : Controller
     {

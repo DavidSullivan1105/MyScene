@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using MyScenes.Contracts;
-using MyScenes.Data;
-using MyScenes.Services;
+using MyScene.Contracts;
+using MyScene.Data;
+using MyScene.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

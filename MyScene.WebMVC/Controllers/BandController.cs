@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MyScenes.Contracts;
-using MyScenes.Models;
+using MyScene.Contracts;
+using MyScene.Models;
 using System.Security.Claims;
 
-namespace MyScenes.WebMVC.Controllers
+namespace MyScene.WebMVC.Controllers
 {
     [Authorize]
     public class BandController : Controller
