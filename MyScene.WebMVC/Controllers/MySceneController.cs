@@ -19,7 +19,7 @@ namespace MyScene.WebMVC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(_mySceneService.GetMyScenes());
         }
 
         public IActionResult Create()

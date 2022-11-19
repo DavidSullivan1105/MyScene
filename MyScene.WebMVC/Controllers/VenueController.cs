@@ -18,7 +18,10 @@ namespace MyScene.WebMVC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (!SetUserIdInService()) return Unauthorized();
+            var venues = _venueService.GetVenues();
+
+            return View(venues);
         }
 
         public IActionResult Create()
@@ -38,16 +41,16 @@ namespace MyScene.WebMVC.Controllers
             else
             {
                 if(_venueService.CreateVenue(model))
-                {
-                    ViewBag.SaveResult = "Venue created successfully";
-                    return RedirectToAction("Index");
-                }
-
-                ModelState.AddModelError("", "Venue could not be created");
-                    
+                return RedirectToAction(nameof(Index));
             }
+                
             return View(model);
+                    
+                
         }
+
+                
+                    
 
         public IActionResult Details(int id)
         {

@@ -79,7 +79,7 @@ namespace MyScene.WebMVC.Controllers
         {
             if (!SetUserIdInService()) return Unauthorized();
 
-            if(ModelState.IsValid) return View(model);
+            if(!ModelState.IsValid) return View(model);
 
             if(model.ArtistId != id)
             {
@@ -90,7 +90,7 @@ namespace MyScene.WebMVC.Controllers
             if (_artistService.UpdateArtist(model))
             {
                 TempData["SaveResult"] = "Artist was updated.";
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
 
             ModelState.AddModelError("", "Artist could not be updated.");
@@ -114,10 +114,11 @@ namespace MyScene.WebMVC.Controllers
         {
             if (!SetUserIdInService()) return Unauthorized();
 
-            _artistService.GetArtistById(id);
+            _artistService.DeleteArtist(id);
             TempData["SaveResult"] = "Artist was deleted.";
 
-            return RedirectToAction("Index");
+            
+            return RedirectToAction(nameof(Index));
         }
 
         private string GetUserId()

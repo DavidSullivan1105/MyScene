@@ -74,7 +74,7 @@ namespace MyScene.Services
                     ArtistPhone = entity.ArtistPhone,
                     ArtistEmail = entity.ArtistEmail,
                     Instrument = entity.Instrument,
-                    //Band = entity.Band,
+                    
                 };
         }
 

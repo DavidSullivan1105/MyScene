@@ -24,11 +24,12 @@ namespace MyScene.Services
             var entity =
                 new Venue()
                 {
-                    VenueID = model.VenueId,
+                    OwnerId = _userId,
                     VenueName = model.VenueName,
                     VenueAddress = model.VenueAddress,
                     VenuePhone = model.VenuePhone,
                     Is21AndOver = model.Is21AndOver,
+                    
                 };
             
             _ctx.Venues.Add(entity);
