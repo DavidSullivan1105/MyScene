@@ -119,9 +119,12 @@ namespace MyScene.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteVenue(int id)
         {
+            if (!SetUserIdInService()) return Unauthorized();
+
             _venueService.DeleteVenue(id);
             TempData["SaveResult"] = "Venue was deleted";
-            return RedirectToAction("Index");
+            
+            return RedirectToAction(nameof(Index));
         }
 
         private string GetUserId()

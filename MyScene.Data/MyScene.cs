@@ -20,3 +20,4 @@ namespace MyScene.Data
         public List<MySceneVenue> Venues { get; set; }
     }
 }
+        

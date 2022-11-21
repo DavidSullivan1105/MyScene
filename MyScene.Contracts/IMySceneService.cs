@@ -1,5 +1,4 @@
 ﻿using MyScene.Models;
-using MyScene.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +9,11 @@ namespace MyScene.Contracts
 {
     public interface IMySceneService
     {
-        public void SetUserId(Guid userId);
-        public bool CreateMyScene(MySceneCreate model);
-        public IEnumerable<MySceneListItem> GetMyScenes();
-        public MySceneDetail GetMySceneById(Guid userId);
-        public bool UpdateMyScene(MySceneEdit model);
-        public bool DeleteMyScene(Guid userId);
+        void SetUserId(Guid userId);
+        bool CreateMyScene(MySceneCreate model);
+        IEnumerable<MySceneListItem> GetMyScenes();
+        MySceneDetail GetMySceneById(Guid userId);
+        bool UpdateMyScene(MySceneEdit model);
+        bool DeleteMyScene(Guid userId);
     }
 }

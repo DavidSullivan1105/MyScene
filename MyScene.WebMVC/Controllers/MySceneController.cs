@@ -32,11 +32,11 @@ namespace MyScene.WebMVC.Controllers
         public IActionResult Create(MySceneCreate model)
         {
             if (!SetUserIdInService()) return Unauthorized();
-           
+
             if (ModelState.IsValid)
             {
 
-            return View(model);
+                return View(model);
             }
             else
             {
@@ -81,15 +81,15 @@ namespace MyScene.WebMVC.Controllers
         {
             if (!SetUserIdInService()) return Unauthorized();
 
-            if(!ModelState.IsValid)
-            return View(model);
-            if(model.UserId != id)
+            if (!ModelState.IsValid)
+                return View(model);
+            if (model.UserId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
             }
-            
-            if(_mySceneService.UpdateMyScene(model))
+
+            if (_mySceneService.UpdateMyScene(model))
             {
                 TempData["SaveResult"] = "Your Scene was updated";
                 return RedirectToAction(nameof(Index));
@@ -99,7 +99,7 @@ namespace MyScene.WebMVC.Controllers
         }
 
         [ActionName("Delete")]
-        public IActionResult Delete (Guid id)
+        public IActionResult Delete(Guid id)
         {
             if (!SetUserIdInService()) return Unauthorized();
             var model = _mySceneService.GetMySceneById(id);

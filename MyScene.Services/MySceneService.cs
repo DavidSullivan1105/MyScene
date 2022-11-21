@@ -1,16 +1,17 @@
-﻿using MyScene.Models;
+﻿//using MyScene.Models;
 using MyScene.Contracts;
 using MyScene.Data;
+using MyScene.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MyScene.Data;
+
 
 namespace MyScene.Services
 {
-    public class MySceneService :IMySceneService
+    public class MySceneService : IMySceneService
     {
         private Guid _userId;
         private readonly ApplicationDbContext _ctx;
@@ -88,7 +89,7 @@ namespace MyScene.Services
             var entity =
                 _ctx
                 .MyScenes
-                .Single(e => e.UserId == _userId);
+                .Single(e => e.UserId == userId);
 
             _ctx.MyScenes.Remove(entity);
             return _ctx.SaveChanges() == 1;
@@ -99,7 +100,6 @@ namespace MyScene.Services
         {
             _userId = userId;
         }
-
 
     }
 }
