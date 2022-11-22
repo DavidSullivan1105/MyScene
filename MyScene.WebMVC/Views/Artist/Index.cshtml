@@ -64,9 +64,9 @@
                 @Html.DisplayFor(modelItem => item.Band)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new {  id=item.ArtistId  }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.ArtistId  }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ArtistId  })
             </td>
         </tr>
 }
