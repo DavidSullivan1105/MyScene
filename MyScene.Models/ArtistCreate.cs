@@ -17,7 +17,7 @@ namespace MyScene.Models
         public int ArtistPhone { get; set; }
         [Required]
         public string Instrument { get; set; }
-        [Required]
+        
         public string Band { get; set; }
 
     }

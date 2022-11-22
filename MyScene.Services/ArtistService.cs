@@ -51,7 +51,6 @@ namespace MyScene.Services
                             ArtistName = e.ArtistName,
                             ArtistEmail = e.ArtistEmail,
                             ArtistPhone = e.ArtistPhone,
-                            //Band = e.Band,
                             Instrument = e.Instrument,
                         });
             return query.ToArray();
