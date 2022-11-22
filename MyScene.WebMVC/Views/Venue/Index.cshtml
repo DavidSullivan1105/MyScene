@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MyScene.Models.VenueListItem>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VenueId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VenueName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VenueAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VenuePhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Is21AndOver)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VenueGenre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenueId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenueName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenueAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenuePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Is21AndOver)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenueGenre)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.VenueId  }) |
+                @Html.ActionLink("Details", "Details", new { id=item.VenueId }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.VenueId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

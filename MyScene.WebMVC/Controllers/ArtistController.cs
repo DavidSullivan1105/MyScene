@@ -3,60 +3,138 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MyScene.Models;
 using MyScene.Services;
+using System.Security.Claims;
 
 namespace MyScene.WebMVC.Controllers
 {
     [Authorize]
     public class ArtistController : Controller
     {
+        private readonly IArtistService _artistService;
+        public ArtistController(IArtistService artistService)
+        {
+            _artistService = artistService;
+        }
+
         public IActionResult Index()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new ArtistService(userId);
-            var model = service.GetArtist();
+            if (!SetUserIdInService()) return Unauthorized();
+            var artists = _artistService.GetArtist();
 
-            return View(model);
+            return View(artists);
         }
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
-       
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(ArtistCreate model)
         {
+            if (!SetUserIdInService()) return Unauthorized();
+
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
-            var service = CreateArtistService();
-
-            if (service.CreateArtist(model))
+           else
             {
-                TempData["SaveResult"] = "Artist created successfully";
-                return RedirectToAction("Index");
-            };
+                if (_artistService.CreateArtist(model))
+                    return RedirectToAction(nameof(Index));
+            }
 
-            ModelState.AddModelError("", "Artist could not be created");
-            
             return View(model);
         }
 
         public IActionResult Details(int id)
         {
-            var svc = CreateArtistService();
-            var model = svc.GetArtistById(id);
+            if (!SetUserIdInService()) return Unauthorized();
+
+            var model = _artistService.GetArtistById(id);
+            return View(model);
+            
+        }
+
+        public IActionResult Edit(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            var detail = _artistService.GetArtistById(id);
+            var model =
+                new ArtistEdit
+                {
+                    ArtistId = detail.ArtistId,
+                    ArtistName = detail.ArtistName,
+                    ArtistEmail = detail.ArtistEmail,
+                };
+            return View(model);
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, ArtistEdit model)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+
+            if(!ModelState.IsValid) return View(model);
+
+            if(model.ArtistId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+            
+            if (_artistService.UpdateArtist(model))
+            {
+                TempData["SaveResult"] = "Artist was updated.";
+                return RedirectToAction(nameof(Index));
+            }
+
+            ModelState.AddModelError("", "Artist could not be updated.");
+            return View(model);
+
+        }
+
+        [ActionName("Delete")]
+        public IActionResult Delete(int id)
+        {
+            if (!SetUserIdInService()) return Unauthorized();
+            var model = _artistService.GetArtistById(id);
 
             return View(model);
         }
 
-        private ArtistService CreateArtistService()
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteArtist(int id)
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new ArtistService(userId);
-            return service;
+            if (!SetUserIdInService()) return Unauthorized();
+
+            _artistService.DeleteArtist(id);
+            TempData["SaveResult"] = "Artist was deleted.";
+
+            
+            return RedirectToAction(nameof(Index));
+        }
+
+        private string GetUserId()
+        {
+            string userIdClaim = User.Claims.First(i => i.Type == ClaimTypes.NameIdentifier).Value;
+            if (userIdClaim == null) return null;
+            return userIdClaim;
+        }
+
+        private bool SetUserIdInService()
+        {
+            var userId = GetUserId();
+            if(userId == null) return false;
+
+            _artistService.SetUserId(Guid.Parse(userId));
+            return true;
         }
     }
 }

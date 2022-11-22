@@ -11,13 +11,13 @@ namespace MyScene.Data
     public class Band
     {
         [Key]
-        public int BandsId { get; set; }
+        public int BandId { get; set; }
         [Required]
         public string BandName { get; set; }
         [Required]
         public Genre BandGenre { get; set; }
         [Required]
-        public List<T>? BandAlbums { get; set; }
+        //public List<string>? Albums { get; set; }
         public Guid OwnerId { get; set; }
 
 

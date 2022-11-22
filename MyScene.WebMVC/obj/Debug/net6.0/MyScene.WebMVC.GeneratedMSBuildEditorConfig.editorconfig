@@ -23,8 +23,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Artist/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Artist/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Artist/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Artist/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Band/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuZFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Band/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuZFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Band/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuZFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Band/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuZFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Band/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Home/Index.cshtml]
@@ -33,6 +65,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/MyScene/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlTY2VuZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/MyScene/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlTY2VuZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/MyScene/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlTY2VuZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/MyScene/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlTY2VuZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/MyScene/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlTY2VuZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Shared/Error.cshtml]
@@ -45,6 +97,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Venue/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Venue/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Venue/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudWVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Venue/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/Venue/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dcsul/source/repos/MyScene.WebMVC/MyScene.WebMVC/Views/_ViewImports.cshtml]

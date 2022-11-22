@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyScene.Contracts\MyScene.Contracts.csproj" />
+    <ProjectReference Include="..\MyScene.Data\MyScene.Data.csproj" />
+    <ProjectReference Include="..\MyScene.Models\MyScene.Models.csproj" />
+  </ItemGroup>
+
 </Project>

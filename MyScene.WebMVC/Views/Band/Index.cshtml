@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MyScene.Models.BandListItem>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+    @ViewBag.SaveResult
+    <button type="button" class="close" data-dismiss="alert">
+        <span>&times;</span>
+    </button>
+    @TempData["SaveResult"]
+</div>}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BandId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BandName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BandId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.BandId }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.BandId}) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.BandId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
