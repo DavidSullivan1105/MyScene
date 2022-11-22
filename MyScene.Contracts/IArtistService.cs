@@ -9,12 +9,12 @@ namespace MyScene.Services
 {
     public interface IArtistService
     {
-        public bool CreateArtist(ArtistCreate model);
-        public IEnumerable<ArtistListItem> GetArtist();
-        public ArtistDetail GetArtistById(int id);
-        public void SetUserId(Guid userId);
-        public bool UpdateArtist(ArtistEdit model);
-        public bool DeleteArtist(int artistId);
+         bool CreateArtist(ArtistCreate model);
+         IEnumerable<ArtistListItem> GetArtist();
+         ArtistDetail GetArtistById(int id);
+         void SetUserId(Guid userId);
+         bool UpdateArtist(ArtistEdit model);
+         bool DeleteArtist(int artistId);
 
     }
 }

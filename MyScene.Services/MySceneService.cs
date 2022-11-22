@@ -24,13 +24,7 @@ namespace MyScene.Services
         public bool CreateMyScene(MySceneCreate model)
         {
             var entity =
-                new MyScene.Data.MyScene()
-                {
-                    UserId = _userId,
-                    Artists = model.Artists,
-                    Bands = model.Bands,
-                    Venues = model.Venues,
-                };
+                new MyScene.Data.MyScene();
             _ctx.MyScenes.Add(entity);
             return _ctx.SaveChanges() == 1;
         }

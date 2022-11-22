@@ -19,7 +19,10 @@ namespace MyScene.WebMVC.Controllers
 
         public IActionResult Index()
         {
-            return View(_mySceneService.GetMyScenes());
+            if (!SetUserIdInService()) return Unauthorized();
+            var myScenes = _mySceneService.GetMyScenes();
+
+            return View(myScenes);
         }
 
         public IActionResult Create()

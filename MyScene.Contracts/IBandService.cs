@@ -9,11 +9,11 @@ namespace MyScene.Contracts
 {
     public interface IBandService
     {
-        public bool CreateBand(BandCreate model);
-        public IEnumerable<BandListItem> GetBands();
-        public void SetUserId(Guid userId);
-        public BandDetail GetBandById(int id);
-        public bool UpdateBand(BandEdit model);
-        public bool DeleteBand(int bandId);
+         bool CreateBand(BandCreate model);
+         IEnumerable<BandListItem> GetBands();
+         void SetUserId(Guid userId);
+         BandDetail GetBandById(int id);
+         bool UpdateBand(BandEdit model);
+         bool DeleteBand(int bandId);
     }
 }
